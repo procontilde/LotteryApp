@@ -8,7 +8,7 @@ public class Jackpot {
 
 	public static void main(String[] args) {
 		
-        String uniqueNumber = generateUniqueFiveDigitNumber();
+        	String uniqueNumber = generateUniqueFiveDigitNumber();
 		String b = generateJackpotSuns();
 		
 		System.out.println("Números: " + uniqueNumber + " Soles: " + b);
@@ -21,7 +21,7 @@ public class Jackpot {
         
         while (selectedDigits.size() < 5) {
         	
-            int num = ThreadLocalRandom.current().nextInt(1, 51); // Números del 1 al 50 inclusivos
+            int num = ThreadLocalRandom.current().nextInt(1, 51); 
             selectedDigits.add(num);
             
         }
@@ -30,11 +30,10 @@ public class Jackpot {
         
         for (int digit : selectedDigits) {
         	
-            sb.append(digit).append(", "); // Agrega cada número seguido de una coma y un espacio
+            sb.append(digit).append(", "); 
             
         }
         
-        // Elimina la última coma y espacio agregados
         sb.setLength(sb.length() - 2);
         
         return sb.toString();
